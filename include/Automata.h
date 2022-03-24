@@ -1,14 +1,14 @@
-//std includes
+// Copyright 2022 UNN-IASR
 #include <iostream>
 #include <array>
 #include <string>
 #include <stdexcept>
 
 class Automata {
-public:
+ public:
     Automata();
 
-public:
+ public:
     void on();
     void off();
     void coin(const int);
@@ -19,9 +19,9 @@ public:
     void cancel();
 
     void getMenu();
-    std::string getState(); 
+    std::string getState();
 
-private:
+ private:
     enum STATES {
         OFF,
         WAIT,
@@ -30,7 +30,7 @@ private:
         COOK
     };
 
-private:
+ private:
     size_t myChoice;
     double myCash;
     std::array<std::string, 10> myMenu;

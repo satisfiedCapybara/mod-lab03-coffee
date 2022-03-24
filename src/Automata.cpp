@@ -1,4 +1,5 @@
-//my includes
+// Copyright 2022 UNN-IASR
+#pragma once
 #include "../include/Automata.h"
 
 Automata::Automata() {
@@ -23,7 +24,7 @@ Automata::Automata() {
 void Automata::getMenu() {
     std::cout << "Menu:" <<std::endl;
 
-    for (auto&& product: myMenu) {
+    for (auto&& product : myMenu) {
         std::cout << product << std::endl;
     }
 
@@ -52,8 +53,7 @@ void Automata::off() {
         std::cout << "Turn off..." << std::endl;
 
         myState = STATES::OFF;
-    }
-    else {
+    } else {
         throw std::logic_error("Unsafe shutdown has aborted.");
     }
 }
@@ -64,20 +64,22 @@ void Automata::coin(const int theCoin) {
 
         myState = STATES::ACCEPT;
         myCash += theCoin;
-    }
-    else {
+    } else {
         throw std::logic_error("It's not the time to put money in.");
     }
 }
 
 void Automata::cancel() {
     if (myState == STATES::ACCEPT || myState == STATES::CHECK) {
-        std::cout << "Operation canceled. The money will be refunded..." << std::endl;
+        std::cout 
+        << "Operation canceled. The money will be refunded..."
+        << std::endl;
 
         myState = STATES::WAIT;
         myCash = 0;
     } else {
-        throw std::logic_error("At this stage, the operation cannot be canceled.");
+        throw 
+        std::logic_error("The operation cannot be canceled.");
     }
 }
 
@@ -87,7 +89,8 @@ void Automata::choice(const int theNumber) {
 
         myState = STATES::CHECK;
     } else {
-        throw std::logic_error("At this stage, the operation cannot be canceled.");
+        throw
+        std::logic_error("The operation cannot be canceled.");
     }
 }
 
@@ -113,7 +116,8 @@ void Automata::cook() {
 
         myState = STATES::COOK;
     } else {
-        throw std::logic_error("This operation is not possible at this stage...");
+        throw 
+        std::logic_error("This operation is not possible at this stage...");
     }
 }
 
@@ -123,6 +127,7 @@ void Automata::finish() {
 
         myState = STATES::WAIT;
     } else {
-        throw std::logic_error("This operation is not possible at this stage...");
+        throw
+        std::logic_error("This operation is not possible at this stage...");
     }
 }

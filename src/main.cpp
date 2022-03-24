@@ -1,11 +1,8 @@
-//my includes
+// Copyright 2022 UNN-IASR
 #include "Automata.h"
-
-//std includes
 #include <iostream>
 
-int main()
-{
+int main() {
     Automata anAutomat;
 
     int aCash = 100;

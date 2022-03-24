@@ -43,7 +43,8 @@ TEST(TEST4, incorrectly_action) {
         anAutomat.cancel();
     }
     catch(std::logic_error& err) {
-        ASSERT_STREQ("At this stage, the operation cannot be canceled.", err.what());
+        ASSERT_STREQ("The operation cannot be canceled."
+        , err.what());
     }
 }
 
@@ -54,7 +55,8 @@ TEST(TEST5, incorrectly_action) {
         anAutomat.choice(4);
     }
     catch(std::logic_error& err) {
-        ASSERT_STREQ("At this stage, the operation cannot be canceled.", err.what());
+        ASSERT_STREQ("The operation cannot be canceled."
+        , err.what());
     }
 }
 
@@ -76,7 +78,8 @@ TEST(TEST7, incorrectly_action) {
         anAutomat.cook();
     }
     catch(std::logic_error& err) {
-        ASSERT_STREQ("This operation is not possible at this stage...", err.what());
+        ASSERT_STREQ("This operation is not possible at this stage..."
+        , err.what());
     }
 }
 
@@ -87,7 +90,8 @@ TEST(TEST8, incorrectly_action) {
         anAutomat.finish();
     }
     catch(std::logic_error& err) {
-        ASSERT_STREQ("This operation is not possible at this stage...", err.what());
+        ASSERT_STREQ("This operation is not possible at this stage..."
+        , err.what());
     }
 }
 
