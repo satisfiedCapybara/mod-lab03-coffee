@@ -31,7 +31,7 @@ void Automata::getMenu() {
 }
 
 std::string Automata::getState() {
-    return "The state is" + myState;
+    return myState;
 }
 
 void Automata::on() {
