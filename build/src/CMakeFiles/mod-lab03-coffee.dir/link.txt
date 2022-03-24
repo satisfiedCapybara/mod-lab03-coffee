@@ -1,0 +1,1 @@
+/bin/clang++-10 -fPIC -g  -shared -Wl,-soname,libmod-lab03-coffee.so -o libmod-lab03-coffee.so CMakeFiles/mod-lab03-coffee.dir/Automata.cpp.o  -lpthread 
