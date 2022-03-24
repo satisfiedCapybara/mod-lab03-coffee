@@ -1,1 +1,0 @@
-/bin/clang++-10  -g   CMakeFiles/mod-lab03-coffee.info.dir/main.cpp.o  -o mod-lab03-coffee.info  -Wl,-rpath,/home/semen/МИПИС/mod-lab03-coffee/build/src: libmod-lab03-coffee.so -lpthread 
