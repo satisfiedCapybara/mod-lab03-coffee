@@ -16,7 +16,7 @@ public:
     void choice(const int);
     void cook();
     void finish();
-    int cancel();
+    void cancel();
 
     void getMenu();
     std::string getState(); 

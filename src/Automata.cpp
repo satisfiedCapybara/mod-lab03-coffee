@@ -70,7 +70,7 @@ void Automata::coin(const int theCoin) {
     }
 }
 
-int Automata::cancel() {
+void Automata::cancel() {
     if (myState == STATES::ACCEPT || myState == STATES::CHECK) {
         std::cout << "Operation canceled. The money will be refunded..." << std::endl;
 
