@@ -20,7 +20,7 @@ class Automata {
     void cancel();
 
     void getMenu();
-    std::string getState();
+    int getState();
 
  private:
     enum STATES {

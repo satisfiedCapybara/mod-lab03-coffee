@@ -99,7 +99,7 @@ TEST(TEST9, incorrectly_action) {
     Automata anAutomat;
     anAutomat.on();
 
-    EXPECT_EQ("WAIT", anAutomat.getState());
+    EXPECT_EQ(1, anAutomat.getState());
 }
 
 TEST(TEST10, correctly_action) {
@@ -107,7 +107,7 @@ TEST(TEST10, correctly_action) {
     anAutomat.on();
     anAutomat.coin(120);
 
-    EXPECT_EQ("ACCEPT", anAutomat.getState());
+    EXPECT_EQ(2, anAutomat.getState());
 }
 
 TEST(TEST11, correctly_action) {
@@ -116,7 +116,7 @@ TEST(TEST11, correctly_action) {
     anAutomat.coin(120);
     anAutomat.choice(4);
 
-    EXPECT_EQ("CHECK", anAutomat.getState());
+    EXPECT_EQ(3, anAutomat.getState());
 }
 
 TEST(TEST12, correctly_action) {
@@ -126,7 +126,7 @@ TEST(TEST12, correctly_action) {
     anAutomat.choice(4);
     anAutomat.cook();
 
-    EXPECT_EQ("COOK", anAutomat.getState());
+    EXPECT_EQ(4, anAutomat.getState());
 }
 
 TEST(TEST13, correctly_action) {
@@ -137,11 +137,11 @@ TEST(TEST13, correctly_action) {
     anAutomat.cook();
     anAutomat.finish();
 
-    EXPECT_EQ("WAIT", anAutomat.getState());
+    EXPECT_EQ(1, anAutomat.getState());
 }
 
 TEST(TEST14, correctly_action) {
     Automata anAutomat;
 
-    EXPECT_EQ("OFF", anAutomat.getState());
+    EXPECT_EQ(0, anAutomat.getState());
 }

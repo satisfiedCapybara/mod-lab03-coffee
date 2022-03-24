@@ -30,7 +30,7 @@ void Automata::getMenu() {
     std::cout << std::endl;
 }
 
-std::string Automata::getState() {
+int Automata::getState() {
     return myState;
 }
 
