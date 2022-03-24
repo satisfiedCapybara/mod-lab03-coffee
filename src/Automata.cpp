@@ -1,5 +1,4 @@
 // Copyright 2022 UNN-IASR
-#pragma once
 #include "../include/Automata.h"
 
 Automata::Automata() {
@@ -71,14 +70,14 @@ void Automata::coin(const int theCoin) {
 
 void Automata::cancel() {
     if (myState == STATES::ACCEPT || myState == STATES::CHECK) {
-        std::cout 
+        std::cout
         << "Operation canceled. The money will be refunded..."
         << std::endl;
 
         myState = STATES::WAIT;
         myCash = 0;
     } else {
-        throw 
+        throw
         std::logic_error("The operation cannot be canceled.");
     }
 }
@@ -116,7 +115,7 @@ void Automata::cook() {
 
         myState = STATES::COOK;
     } else {
-        throw 
+        throw
         std::logic_error("This operation is not possible at this stage...");
     }
 }

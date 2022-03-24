@@ -142,6 +142,6 @@ TEST(TEST13, correctly_action) {
 
 TEST(TEST14, correctly_action) {
     Automata anAutomat;
-    
+
     EXPECT_EQ("OFF", anAutomat.getState());
 }
